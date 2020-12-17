@@ -75,6 +75,33 @@ body header .balloons-wrapper img:nth-child(11), body header .balloons-wrapper i
     transform: rotate(10deg);
   }
 }
+@keyframes santa-claus {
+  0% {
+    left: 25%;
+    top: 58%;
+    transform: scaleX(1);
+  }
+  49% {
+    left: 65%;
+    top: 58%;
+    transform: scaleX(1);
+  }
+  50% {
+    left: 65%;
+    top: 58%;
+    transform: scaleX(-1);
+  }
+  99% {
+    left: 25%;
+    top: 58%;
+    transform: scaleX(-1);
+  }
+  100% {
+    left: 25%;
+    top: 58%;
+    transform: scaleX(1);
+  }
+}
 body {
   background-color: antiquewhite;
   overflow-x: hidden;
@@ -109,6 +136,10 @@ body header:hover .balloons-little-wrapper img:nth-child(2n+1) {
 body header:hover .balloons-little-wrapper img:nth-child(2n) {
   cursor: pointer;
   animation: balloons-little 1s infinite alternate ease-in-out;
+}
+body header:hover .santa-claus {
+  cursor: pointer;
+  animation: santa-claus 3s infinite;
 }
 body header .tree-wrapper {
   position: absolute;
@@ -174,6 +205,15 @@ body header .balloons-wrapper img:nth-child(10) {
 body header .balloons-wrapper img:nth-child(11) {
   top: 202px;
   left: 35px;
+}
+body header .santa-claus {
+  width: 230px;
+  position: absolute;
+  left: 25%;
+  top: 58%;
+}
+body header .santa-claus img {
+  width: 100%;
 }
 
 .bg-1 .bg-wrapper {

@@ -78,6 +78,34 @@
   }
 }
 
+@keyframes santa-claus {
+  0% {
+    left: 25%;
+    top: 58%;
+    transform: scaleX(1);
+  }
+  49% {
+    left: 65%;
+    top: 58%;
+    transform: scaleX(1);
+  }
+  50% {
+    left: 65%;
+    top: 58%;
+    transform: scaleX(-1);
+  }
+  99% {
+    left: 25%;
+    top: 58%;
+    transform: scaleX(-1);
+  }
+  100% {
+    left: 25%;
+    top: 58%;
+    transform: scaleX(1);
+  }
+}
+
 body {
   background-color: antiquewhite;
   overflow-x: hidden;
@@ -117,6 +145,10 @@ body {
           cursor: pointer;
           animation: balloons-little 1s infinite alternate ease-in-out;
         }
+      }
+      .santa-claus {
+        cursor: pointer;
+        animation: santa-claus 3s infinite;
       }
     }
     .tree-wrapper {
@@ -193,6 +225,15 @@ body {
         top: 202px;
         left: 35px;
         @extend %hover-position;
+      }
+    }
+    .santa-claus {
+      width: 230px;
+      position: absolute;
+      left: 25%;
+      top: 58%;
+      img {
+        width: 100%;
       }
     }
   }
