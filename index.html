@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="preloader_content">
+        <div class="🤚">
+            <div class="👉"></div>
+            <div class="👉"></div>
+            <div class="👉"></div>
+            <div class="👉"></div>
+            <div class="🌴"></div>
+            <div class="👍"></div>
+        </div>
+    </div>
+    <header>
+        <div class="tree-wrapper">
+            <img src="images/tree-branch-left.png" alt="tree">
+            <img src="images/tree-branch.png" alt="tree">
+        </div>
+        <div class="balloons-little-wrapper">
+            <img src="images/balloons-blue.png" alt="balloons">
+            <img src="images/balloons-gold.png" alt="balloons">
+            <img src="images/balloons-green.png" alt="balloons">
+            <img src="images/balloons-red.png" alt="balloons">
+            <img src="images/balloons-purple.png" alt="balloons">
+            <img src="images/balloons-blue.png" alt="balloons">
+            <img src="images/balloons-gold.png" alt="balloons">
+            <img src="images/balloons-green.png" alt="balloons">
+            <img src="images/balloons-red.png" alt="balloons">
+            <img src="images/balloons-purple.png" alt="balloons">
+            <img src="images/balloons-blue.png" alt="balloons">
+            <img src="images/balloons-gold.png" alt="balloons">
+            <img src="images/balloons-green.png" alt="balloons">
+            <img src="images/balloons-red.png" alt="balloons">
+            <img src="images/balloons-purple.png" alt="balloons">
+        </div>
+        <div class="balloons-wrapper">
+            <img src="images/balloons-bow-blue.png" alt="balloons">
+            <img src="images/balloons-bow-green.png" alt="balloons">
+            <img src="images/balloons-bow-orange.png" alt="balloons">
+            <img src="images/balloons-bow-red.png" alt="balloons">
+            <img src="images/balloons-bow-green.png" alt="balloons">
+            <img src="images/balloons-bow-orange.png" alt="balloons">
+            <img src="images/balloons-bow-red.png" alt="balloons">
+            <img src="images/balloons-bow-green.png" alt="balloons">
+            <img src="images/balloons-bow-orange.png" alt="balloons">
+            <img src="images/balloons-bow-red.png" alt="balloons">
+            <img src="images/balloons-bow-red.png" alt="balloons">
+        </div>
+    </header>
+    <section class="bg-1">
+        <div class="bg-wrapper">
+            <div class="mario">
+                <div class="mario-wrapper-body">
+                    <img src="images/mario-body.png" alt="mario-body">
+                </div>
+                <div class="mario-wrapper-foot">
+                    <img src="images/mario-foot.png" alt="mario-foot">
+                </div>
+            </div>
+        </div>
+    </section>
+    <audio id="myAudio">
+        <source src="audio/novogodnie_kolokolchiki.mp3" type="audio/ogg">
+        <source src="audio/novogodnie_kolokolchiki.mp3" type="audio/mpeg">
+    </audio>
+<script src="js/jssnow.js"></script>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.10.1.min.js'></script>
+<script type='text/javascript'>
+        $(window).on('load', function () {
+            $('.preloader_content').delay(500).fadeToggle(500);
+        });
+</script>    
+<script src="js/script.js"></script>
+</body>
+</html>

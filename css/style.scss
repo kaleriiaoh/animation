@@ -1,0 +1,390 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+%hover-position{
+  position: relative;
+  transform-origin: top;
+}
+@keyframes mario{
+  0%  {
+    top: 75%;
+    left: 10%;
+    transform: scaleX(1);
+  }
+  50% {
+    top: 75%;
+    left: 75%;
+    transform: scaleX(1);
+  }
+  51% {
+    top: 75%;
+    left: 75%;
+    transform: scaleX(-1);
+  }
+  100% {
+    top: 75%;
+    left: 10%;
+    transform: scaleX(-1);
+  }
+}
+
+@keyframes mario-foot{
+  0%  {
+    top: -42px;
+    left: 31px;
+  }
+  100%  {
+    top: -50px;
+    left: 38px;
+    transform: rotate(-85deg);
+  }
+}
+
+@keyframes balloons-bow {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes balloons-little {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes tree-branch {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes tree-branch-left {
+  0% {
+    transform: rotate(0deg) ;
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+body {
+  background-color: antiquewhite;
+  overflow-x: hidden;
+  header{
+    background: url("../images/bg-header.jpg") no-repeat 100% /cover;
+    width: 100%;
+    height: 100vh;
+    &:hover {
+      .tree-wrapper{
+        img:nth-child(1) {
+          transform-origin: left;
+          cursor: pointer;
+          animation: tree-branch-left 1s infinite alternate-reverse ease-in-out;
+        }
+        img:nth-child(2) {
+          transform-origin: right;
+          cursor: pointer;
+          animation: tree-branch 1s infinite alternate-reverse ease-in-out;
+        }
+      }
+      .balloons-wrapper {
+        img:nth-child(2n) {
+          cursor: pointer;
+          animation: balloons-bow 1s infinite alternate-reverse ease-in-out;
+        }
+        img:nth-child(2n+1) {
+          cursor: pointer;
+          animation: balloons-bow 1s infinite alternate ease-in-out;
+        }
+      }
+      .balloons-little-wrapper {
+        img:nth-child(2n+1) {
+          cursor: pointer;
+          animation: balloons-little 0.5s infinite alternate-reverse ease-in-out;
+        }
+        img:nth-child(2n) {
+          cursor: pointer;
+          animation: balloons-little 1s infinite alternate ease-in-out;
+        }
+      }
+    }
+    .tree-wrapper {
+      position: absolute;
+      z-index: 2;
+      width: 110%;
+      top: -57px;
+      right: -65px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .balloons-little-wrapper {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      width: 100%;
+      top: -75px;
+    }
+    .balloons-wrapper{
+      background: url("../images/bow.png") repeat-x;
+      width: 100%;
+      height: 100%;
+      img:nth-child(1) {
+        top: 195px;
+        left: 2px;
+        @extend %hover-position;
+      }
+      img:nth-child(2) {
+        top: 184px;
+        left: -2px;
+        @extend %hover-position;
+      }
+      img:nth-child(3) {
+        top: 203px;
+        left: -16px;
+        @extend %hover-position;
+      }
+      img:nth-child(4) {
+        top: 125px;
+        left: 0;
+        @extend %hover-position;
+      }
+      img:nth-child(5) {
+        top: 199px;
+        left: 7px;
+        @extend %hover-position;
+      }
+      img:nth-child(6) {
+        top: 133px;
+        left: 9px;
+        @extend %hover-position;
+      }
+      img:nth-child(7) {
+        top: 186px;
+        left: 30px;
+        @extend %hover-position;
+      }
+      img:nth-child(8) {
+        top: 166px;
+        left: 28px;
+        @extend %hover-position;
+      }
+      img:nth-child(9) {
+        top: 213px;
+        left: 52px;
+        @extend %hover-position;
+      }
+      img:nth-child(10) {
+        top: 185px;
+        left: 47px;
+        @extend %hover-position;
+      }
+      img:nth-child(11) {
+        top: 202px;
+        left: 35px;
+        @extend %hover-position;
+      }
+    }
+  }
+}
+
+.bg-1 {
+  .bg-wrapper {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background-image: url("../images/bg-1.jpg");
+    .mario {
+      width: 80px;
+      position: relative;
+      top: 75%;
+      left: 10%;
+      animation: mario 5.5s infinite;
+      .mario-wrapper-body {
+        width: 80px;
+        img {
+          width: 100%;
+        }
+      }
+      .mario-wrapper-foot {
+        width: 30px;
+        position: relative;
+        top: -40px;
+        left: 35px;
+        animation: mario-foot 0.5s infinite reverse;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.preloader_content {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  color: #fff;
+  z-index: 9999999;
+}
+
+.🤚
+{
+  --skin-color: #E4C560;
+  --tap-speed: 0.6s;
+  --tap-stagger: 0.1s;
+  position: absolute;
+  width: 8vw;
+  height: 6vw;
+  left: 50%;
+  top: 50%;
+  &:before
+  {
+    content: '';
+    display: block;
+    width: 180%;
+    height: 75%;
+    position:absolute;
+    top: 70%;
+    right: 20%;
+    background-color: black;
+    border-radius: 4vw 1vw;
+    filter: blur(10px);
+    opacity: 0.3;
+  }
+}
+
+.🌴
+{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--skin-color);
+  border-radius: 1vw 4vw;
+}
+
+.👍
+{
+  position: absolute;
+  width: 120%;
+  height: 3.2vw;
+  background-color: var(--skin-color);
+  bottom: -18%;
+  right: 1%;
+  transform-origin: calc(100% - 2vw) 2vw;
+  transform: rotate(-20deg);
+  border-radius: 3vw 2vw 2vw 1vw;
+  border-bottom: 2px solid rgba(black, 0.1);
+  border-left: 2px solid rgba(black, 0.1);
+
+  &:after
+  {
+    width: 20%;
+    height: 60%;
+    content: '';
+    background-color: rgba(white, 0.3);
+    position: absolute;
+    bottom: -8%;
+    left: 0.5vw;
+    border-radius: 60% 10% 10% 30%;
+    border-right: 2px solid rgba(black, 0.05);
+  }
+}
+
+.👉
+{
+  position: absolute;
+  width: 80%;
+  height: 3.5vw;
+  background-color: var(--skin-color);
+  bottom: 32%;
+  right: 64%;
+  transform-origin: 100% 2vw;
+
+  animation-duration: calc(var(--tap-speed) * 2);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform: rotate(10deg);
+
+  &:before
+  {
+    content: '';
+    position: absolute;
+    width: 140%;
+    height: 3vw;
+    background-color: var(--skin-color);
+    bottom: 8%;
+    right: 65%;
+    transform-origin: calc(100% - 2vw) 2vw;
+    transform: rotate(-60deg);
+    border-radius: 2vw;
+  }
+
+  &:nth-child(1)
+  {
+
+    filter: brightness(70%);
+    animation-name : tap-upper-1;
+  }
+
+  &:nth-child(2)
+  {
+    animation-delay: var(--tap-stagger);
+    filter: brightness(80%);
+    animation-name: tap-upper-2;
+  }
+
+  &:nth-child(3)
+  {
+    animation-delay: calc(var(--tap-stagger) * 2);
+    filter: brightness(90%);
+    animation-name: tap-upper-3;
+  }
+
+  &:nth-child(4)
+  {
+    animation-delay: calc(var(--tap-stagger) * 3);
+    filter: brightness(100%);
+    animation-name: tap-upper-4;
+  }
+}
+
+@keyframes tap-upper-1
+{
+  0%, 50%, 100% {transform: rotate(10deg) scale(0.4)}
+  40% {transform: rotate(50deg) scale(0.4)}
+}
+
+@keyframes tap-upper-2
+{
+  0%, 50%, 100% {transform: rotate(10deg) scale(0.6);}
+  40% {transform: rotate(50deg) scale(0.6);}
+}
+
+@keyframes tap-upper-3
+{
+  0%, 50%, 100% {transform: rotate(10deg) scale(0.8);}
+  40% {transform: rotate(50deg) scale(0.8);}
+}
+
+@keyframes tap-upper-4
+{
+  0%, 50%, 100% {transform: rotate(10deg) scale(1);}
+  40% {transform: rotate(50deg) scale(1);}
+}
