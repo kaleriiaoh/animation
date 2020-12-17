@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
     y.addEventListener('mouseleave', function () {
         x.pause();
     })
-})
+});
+
+$(window).on('load', function () {
+    $('.preloader_content').delay(500).fadeToggle(500);
+});
 
 
