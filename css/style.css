@@ -916,7 +916,7 @@ body header .balloons-wrapper img:nth-child(11), body header .balloons-wrapper i
   }
 }
 body {
-  background-color: antiquewhite;
+  background-color: #99CCCC;
   overflow-x: hidden;
 }
 body header {
@@ -1029,6 +1029,9 @@ body header .santa-claus img {
   width: 100%;
 }
 
+.bg-1 {
+  padding: 40px;
+}
 .bg-1 .bg-wrapper {
   width: 500px;
   height: 500px;

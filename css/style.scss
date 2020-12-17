@@ -109,7 +109,7 @@
 }
 
 body {
-  background-color: antiquewhite;
+  background-color: #99CCCC;
   overflow-x: hidden;
   header{
     background: url("../images/bg-header.jpg") no-repeat 100% /cover;
@@ -242,6 +242,7 @@ body {
 }
 
 .bg-1 {
+  padding: 40px;
   .bg-wrapper {
     width: 500px;
     height: 500px;
